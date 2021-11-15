@@ -1,0 +1,284 @@
+@import url('all.css');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.main {
+    height: 200vh;
+    background-color: #ecf0f3;
+/*    background: linear-gradient(154deg, white 0%, white 50%, #000 50%, #000 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar,
+.left,
+.bottom,
+.teachers-box,
+.img {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px white;
+}
+
+.navbar {
+    width: 95%;
+    height: 70px;
+    display: flex;
+    background: rgba(250, 250, 250, .10);
+    backdrop-filter: blur(35px);
+    z-index: 10;
+    margin-top: 10px;
+}
+
+.main .navbar .logo {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo>h1 {
+    font-size: 47px;
+    font-weight: 900;
+    margin-left: 90px;
+    /*animation: filtration 5s linear infinite;*/
+    text-shadow: 1px 1px #454545 inset,
+    			 -2px -2px #fff inset;
+    color: #000;
+    font-family: 'Patrick Hand', cursive;
+
+}
+
+.text h1 span {
+    display: inline-block;
+    transform: translateY(0);
+    animation: animated 3s linear infinite;
+    animation-direction: alternate;
+    animation-delay: calc(var(--a)*.5s);
+}
+
+@keyframes animated {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main .navbar .nav-menu {
+    width: 50%;
+    height: 100%;
+}
+
+.nav-menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-menu ul li {
+    list-style: none;
+}
+
+
+.nav-menu ul li a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #000;
+    font-family: 'Concert One', cursive;
+    transition: color .5s;  
+}
+
+.navbar .nav-menu ul li a:hover{
+    color: #f00;
+}
+
+.left {
+    width: 95%;
+    height: 40%;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    /*backdrop-filter: blur(10px);*/
+    letter-spacing: 1px;
+}
+
+.text h1 {
+    text-shadow: 2px 2px 10px #fff;
+    mix-blend-mode: difference;
+}
+
+.box-shadow {
+    text-shadow: 3px 3px 10px #005697;
+}
+
+::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+.bottom {
+    width: 95%;
+    height: 100px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.computer-container{
+	width: 95%;
+	height: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.box, .box1, .box2{
+	width: 30%;
+	height: 90%;
+	background: url('https://i.pinimg.com/originals/24/5d/9d/245d9d30b0ba45ce3b9768b8e5b52b2b.gif');
+	background-size: cover;
+	background-position: center;
+}
+
+.box1{
+	background: url('https://i.pinimg.com/originals/44/f0/02/44f002166db0c224c90703f18a659dae.gif');
+	background-repeat: no-repeat;
+}
+.box2{
+	background: url('https://i.gifer.com/Vanb.gif');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.teachers-box {
+	width: 95%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	/*margin-top: 40px;*/
+}
+
+.section {
+	width: 25%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; 
+	margin: 60px;
+}
+
+.name > h1, .section-text > h3 {
+	color: #000;
+	text-align: center;
+	margin: 10px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.section-text > h3 {
+	text-align: justify;
+}
+
+.img {
+	width: 200px;
+	height: 200px;
+	background: #ff0000;
+	border-radius: 50%;
+	margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIO8ADu31F1r1BX54CYrCfxBqOsUwv8ggujg&usqp=CAU');*/
+}
+
+img{
+    height: 180px;
+    width: 180px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.bor{
+    position: relative;
+	width: 95%;
+	height: 4px;
+	background: #000;
+}
+.bor-ch1,.bor-ch2{
+    position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	border: 3px solid #000;
+    top: -13px;
+    background-color: #fff;
+    animation: animat 6s linear infinite;
+    animation-direction: alternate;
+    box-shadow: 0 0 5px #05ff7e,
+              0 5px 10px #05ff7e,
+              0 0 20px #05ff7e,
+              0 10px 30px #05ff7e,
+              0 -15px 40px #05ff7e;
+}
+
+.bor-ch2{
+    right: 0px;
+}
+
+@keyframes animat{
+    0%{
+        transform: translateX(900px);
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.bor-ch2{
+    animation: animati 6s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animati{
+    0%{
+        transform: translateX(-900px);
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
